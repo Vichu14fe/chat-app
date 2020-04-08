@@ -1,4 +1,4 @@
-# myprivacy
+# Simple-chat-app
 
 chat app
 
