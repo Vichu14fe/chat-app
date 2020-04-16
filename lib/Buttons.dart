@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class Roundbuttons extends StatelessWidget {
   Roundbuttons({this.title, this.colour, @required this.onpress});
 
@@ -18,7 +19,8 @@ class Roundbuttons extends StatelessWidget {
           onPressed: onpress,
           minWidth: 200.0,
           height: 42.0,
-          child: Text(title,
+          child: Text(
+            title,
             style: TextStyle(
               fontSize: 20,
               color: Colors.white,

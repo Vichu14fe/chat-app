@@ -4,8 +4,10 @@ import 'loginScreen.dart';
 import 'package:privacy/RegistrationScreen.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:privacy/Buttons.dart';
+
 class WelcomeScreen extends StatefulWidget {
   static const String id = 'welcome_screen';
+
   @override
   _WelcomeScreenState createState() => _WelcomeScreenState();
 }
@@ -14,6 +16,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
     with SingleTickerProviderStateMixin {
   AnimationController controller;
   Animation animation;
+
   @override
   void initState() {
     super.initState();
@@ -53,8 +56,13 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                 Padding(
                   padding: EdgeInsets.fromLTRB(0, 52, 40, 0),
                   child: ColorizeAnimatedTextKit(
-                    text:['PRIVACY'],
-                    colors :[Colors.blue,Colors.purple,Colors.white,Colors.yellow],
+                    text: ['PRIVACY'],
+                    colors: [
+                      Colors.blue,
+                      Colors.purple,
+                      Colors.white,
+                      Colors.yellow
+                    ],
                     textStyle: TextStyle(
                       fontSize: 45.0,
                       fontWeight: FontWeight.w900,
@@ -66,20 +74,23 @@ class _WelcomeScreenState extends State<WelcomeScreen>
             SizedBox(
               height: 480.0,
             ),
-
             Expanded(
-
-                child: Roundbuttons(title: 'Log In',colour: Colors.lightBlue,onpress:  () {
-                  Navigator.pushNamed(context, LoginScreen.id);
-                }),
-
+              child: Roundbuttons(
+                  title: 'Log In',
+                  colour: Colors.lightBlue,
+                  onpress: () {
+                    Navigator.pushNamed(context, LoginScreen.id);
+                  }),
             ),
             Expanded(
-
-                child: Roundbuttons(title: 'Register',colour: Colors.blue.shade700,onpress:  () {
-                  Navigator.pushNamed(context, RegistrationScreen.id);
-                }),
-
+              child: Container(
+                child: Roundbuttons(
+                    title: 'Register',
+                    colour: Colors.blue.shade700,
+                    onpress: () {
+                      Navigator.pushNamed(context, RegistrationScreen.id);
+                    }),
+              ),
             ),
           ],
         ),
@@ -87,6 +98,3 @@ class _WelcomeScreenState extends State<WelcomeScreen>
     );
   }
 }
-
-
-
